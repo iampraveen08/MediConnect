@@ -69,6 +69,12 @@ export default function Navbar() {
                 })}
               </div>
             </div>
+            <button
+              type="button"
+              class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-300 font-medium rounded-full text-[10px] px-2 py-0.5 h-6 text-center me-1 mb-1 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-indigo-600 ml-[20px] mt-[7px] cursor-pointer"
+            >
+              Admin Panel
+            </button>
           </div>
 
           {/* Create Account Button */}
