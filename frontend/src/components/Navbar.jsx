@@ -1,4 +1,6 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+
 import {
   Disclosure,
   DisclosureButton,
@@ -20,7 +22,23 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const location = useLocation();
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    setUser(null);
+    navigate("/");
+  };
 
   return (
     <Disclosure as="nav">
@@ -69,28 +87,44 @@ export default function Navbar() {
                 })}
               </div>
             </div>
-            <button
-              type="button"
-              class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-300 font-medium rounded-full text-[10px] px-2 py-0.5 h-6 text-center me-1 mb-1 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-indigo-600 ml-[20px] mt-[7px] cursor-pointer"
-            >
-              Admin Panel
-            </button>
+
+            {/* Admin Panel Button (only if not logged in) */}
+            {!user && (
+              <button
+                type="button"
+                onClick={() => navigate("/adminlogin")}
+                className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-300 font-medium rounded-full text-[10px] px-2 py-0.5 h-6 text-center me-1 mb-1 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-indigo-600 ml-[20px] mt-[7px] cursor-pointer"
+              >
+                Admin Panel
+              </button>
+            )}
           </div>
 
-          {/* Create Account Button */}
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <Menu as="div" className="relative ml-3">
-              <div>
-                <MenuButton className="relative flex rounded-full text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden">
-                  <Link
-                    to="/signup"
-                    className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-indigo-600 rounded-lg border border-indigo-600 bg-white hover:bg-indigo-600 hover:text-white transition-colors duration-300"
-                  >
-                    <span className="relative px-5 py-2.5">Create Account</span>
-                  </Link>
-                </MenuButton>
-              </div>
-            </Menu>
+          {/* Right side: Create Account or Profile + Logout */}
+          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-4">
+            {user ? (
+              <>
+                <img
+                  src={user.profileImage}
+                  alt="Profile"
+                  className="h-9 w-9 rounded-full border border-indigo-600 cursor-pointer"
+                  title={user.name}
+                />
+                <button
+                  onClick={handleLogout}
+                  className="text-sm px-3 py-1 bg-indigo-500 text-white rounded hover:bg-red-600 cursor-pointer"
+                >
+                  Logout
+                </button>
+              </>
+            ) : (
+              <Link
+                to="/signup"
+                className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-indigo-600 rounded-lg border border-indigo-600 bg-white hover:bg-indigo-600 hover:text-white transition-colors duration-300"
+              >
+                <span className="relative px-5 py-2.5">Create Account</span>
+              </Link>
+            )}
           </div>
         </div>
       </div>

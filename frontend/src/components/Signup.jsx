@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // ✅ Add this
 
 export default function Signup() {
   const [formData, setFormData] = useState({
@@ -7,17 +8,17 @@ export default function Signup() {
     password: "",
     confirmPassword: "",
   });
+  const navigate = useNavigate(); // ✅ Define it
 
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(name, value); // Optional: remove after testing
-    setFormData({
-      ...formData,
+    setFormData((prev) => ({
+      ...prev,
       [name]: value,
-    });
+    }));
     setError("");
     setMessage("");
   };
@@ -42,6 +43,13 @@ export default function Signup() {
         }),
       });
 
+      const contentType = response.headers.get("content-type");
+
+      if (!contentType || !contentType.includes("application/json")) {
+        const text = await response.text(); // Read the raw response for debugging
+        throw new Error(`Unexpected response: ${text}`);
+      }
+
       const data = await response.json();
 
       if (!response.ok) {
@@ -50,8 +58,9 @@ export default function Signup() {
 
       setMessage(data.msg || "Signup successful");
       setFormData({ name: "", email: "", password: "", confirmPassword: "" });
+      navigate("/login");
     } catch (err) {
-      setError(err.message);
+      setError(err.message || "Something went wrong");
     }
   };
 
@@ -71,9 +80,8 @@ export default function Signup() {
           <input
             type="text"
             name="name"
-            required
             placeholder="Full Name"
-            maxLength={100}
+            required
             value={formData.name}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md text-base focus:outline-none"
@@ -81,9 +89,8 @@ export default function Signup() {
           <input
             type="email"
             name="email"
-            required
             placeholder="Email address"
-            maxLength={100}
+            required
             value={formData.email}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md text-base focus:outline-none"
@@ -91,8 +98,8 @@ export default function Signup() {
           <input
             type="password"
             name="password"
-            required
             placeholder="Password"
+            required
             value={formData.password}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md text-base focus:outline-none"
@@ -100,8 +107,8 @@ export default function Signup() {
           <input
             type="password"
             name="confirmPassword"
-            required
             placeholder="Confirm Password"
+            required
             value={formData.confirmPassword}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md text-base focus:outline-none"

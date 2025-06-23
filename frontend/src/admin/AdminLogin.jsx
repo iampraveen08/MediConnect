@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-export default function Login() {
+export default function AdminLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -31,17 +31,9 @@ export default function Login() {
 
       // Save token to localStorage (or context if you have auth setup)
       localStorage.setItem("token", data.token);
-      localStorage.setItem(
-        "user",
-        JSON.stringify({
-          name: data.user?.name || "User",
-          email: data.user?.email || email,
-          profileImage: data.user?.profileImage || "https://i.pravatar.cc/40",
-        })
-      );
 
       setMessage("Login successful");
-      navigate("/"); // redirect after login
+      navigate("/dashboard"); // redirect after login
     } catch (err) {
       setError(err.message);
     }
@@ -57,7 +49,7 @@ export default function Login() {
             alt="Logo"
           />
           <h2 className="mt-6 text-center text-3xl font-bold text-gray-900">
-            Sign in to your account
+            Admin Login
           </h2>
         </div>
 
@@ -92,17 +84,17 @@ export default function Login() {
             type="submit"
             className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-500 cursor-pointer"
           >
-            Sign In
+            Log In
           </button>
         </form>
 
         <p className="mt-2 text-center text-sm text-gray-600">
-          Don't have an account?{" "}
+          Doctor Login?{" "}
           <Link
-            to="/signup"
+            to="/doctorlogin"
             className="text-indigo-600 hover:text-indigo-500 cursor-pointer"
           >
-            Sign up
+            Click Here
           </Link>
         </p>
       </div>

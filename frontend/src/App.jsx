@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import data from "./components/content.json";
+
+// Component Imports
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Info from "./components/Info";
@@ -8,11 +9,20 @@ import DoctorsCard from "./components/DoctorsCard";
 import Footer from "./components/Footer";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
-import "./App.css";
 import AboutUs from "./components/AboutUs";
 import Contact from "./components/Contact";
-import AllDoctors from "./pages/AllDoctors";
 import BottomContent from "./components/BottomContent";
+
+// Page & Auth Imports
+import AllDoctors from "./pages/AllDoctors";
+import DoctorLogin from "./doctor/DoctorLogin";
+import AdminLogin from "./admin/AdminLogin";
+
+// Static Data
+import data from "./components/content.json";
+
+// Styling
+import "./App.css";
 
 export default function App() {
   return (
@@ -32,6 +42,7 @@ export default function App() {
             </>
           }
         />
+
         <Route
           path="/alldoctors"
           element={
@@ -42,6 +53,7 @@ export default function App() {
             </>
           }
         />
+
         <Route
           path="/contact"
           element={
@@ -52,6 +64,7 @@ export default function App() {
             </>
           }
         />
+
         <Route
           path="/about"
           element={
@@ -62,6 +75,9 @@ export default function App() {
             </>
           }
         />
+
+        <Route path="/doctorlogin" element={<DoctorLogin />} />
+        <Route path="/adminlogin" element={<AdminLogin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
       </Routes>
