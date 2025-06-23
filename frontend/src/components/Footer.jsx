@@ -1,9 +1,15 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faSquareFacebook,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
     <div>
-      <footer class="bg-blue-800 text-white py-8 mt-30">
+      <footer class="bg-indigo-800 text-white py-8 mt-30">
         <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 class="text-lg font-semibold mb-2 italic">MediConnect</h3>
@@ -56,17 +62,25 @@ export default function Footer() {
             <p class="text-sm">Phone: +91-9876543210</p>
             <div class="flex mt-2 space-x-3">
               <a href="#">
-                <img src="/icons/facebook.svg" alt="Facebook" class="h-5 w-5" />
-              </a>
-              <a href="#">
-                <img
-                  src="/icons/instagram.svg"
-                  alt="Instagram"
-                  class="h-5 w-5"
+                <FontAwesomeIcon
+                  icon={faSquareFacebook}
+                  className="text-gray-300 hover:text-indigo-600 transition duration-300"
+                  size="1x"
                 />
               </a>
               <a href="#">
-                <img src="/icons/twitter.svg" alt="Twitter" class="h-5 w-5" />
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  className="text-white hover:text-indigo-400 transition duration-300"
+                  size="1x"
+                />
+              </a>
+              <a href="#">
+                <FontAwesomeIcon
+                  icon={faTwitter}
+                  className="text-white hover:text-indigo-400 transition duration-300"
+                  size="1x"
+                />
               </a>
             </div>
           </div>

@@ -9,19 +9,55 @@ import Footer from "./components/Footer";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import "./App.css";
+import AboutUs from "./components/AboutUs";
+import Contact from "./components/Contact";
+import AllDoctors from "./pages/AllDoctors";
+import BottomContent from "./components/BottomContent";
 
 export default function App() {
   return (
     <Router>
-      <Navbar />
       <Routes>
         <Route
           path="/"
           element={
             <>
+              <Navbar />
               <Hero />
               <Info />
               <DoctorsCard data={data} />
+              <AboutUs />
+              <BottomContent />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/alldoctors"
+          element={
+            <>
+              <Navbar />
+              <AllDoctors />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <>
+              <Navbar />
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <>
+              <Navbar />
+              <AboutUs />
               <Footer />
             </>
           }

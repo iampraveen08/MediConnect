@@ -35,7 +35,7 @@ export default function Hero() {
             </a>
             <a
               href="#"
-              class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-white focus:ring-4 focus:ring-gray-100 dark:text-gray dark:border-gray-700 dark:hover:bg-blue-700 dark:focus:ring-gray-800"
+              class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-white focus:ring-4 focus:ring-gray-100 dark:text-gray dark:border-gray-700 dark:hover:bg-indigo-700 dark:focus:ring-gray-800"
             >
               Speak to Sales
             </a>
