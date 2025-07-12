@@ -18,7 +18,7 @@ function App() {
                         <>
                             <Navbar />
                             <Sidebar />
-
+                        {/*    Add Data.jsx here to use*/}
                         </>
                     }
                 />
