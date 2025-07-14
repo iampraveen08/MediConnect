@@ -4,8 +4,7 @@ import {LuFolderSearch} from "react-icons/lu";
 
 const Data = () => {
     return (
-        <div>
-            <div className="mt-6">
+            <div className="mt-0">
                 <div className="grid md:grid-cols-3 gap-6 text-center">
                     {[
                         {
@@ -37,7 +36,6 @@ const Data = () => {
                     ))}
                 </div>
             </div>
-        </div>
     );
 };
 

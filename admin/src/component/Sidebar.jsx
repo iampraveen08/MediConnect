@@ -6,6 +6,8 @@ import { AiOutlinePlusSquare } from "react-icons/ai";
 import { FaUserDoctor } from "react-icons/fa6";
 import { LuFolderSearch } from "react-icons/lu";
 import { FaUserLarge } from "react-icons/fa6";
+import Data from './Data';
+import { Link } from 'react-router-dom';
 
 
 
@@ -39,9 +41,10 @@ const Sidebar = () => {
                                         </a>
                                     </li>
                                     <li>
-                                        <a className="inline-flex items-center w-full px-4 py-2 mt-1 text-base text-gray-900 transition duration-500 ease-in-out transform rounded-lg hover:bg-gray-50" href="#">
+
+                                        <a className="inline-flex items-center w-full px-4 py-2 mt-1 text-base text-gray-900 transition duration-500 ease-in-out transform rounded-lg hover:bg-gray-50" href="/adddoctor">
                                             <AiOutlinePlusSquare className="w-5 h-5"/>
-                                            <span className="ml-4">Add Doctor</span>
+                                            <span className="ml-4"><Link to="/adddoctor">Add Doctor</Link></span>
                                         </a>
                                     </li>
                                     <li>
