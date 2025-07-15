@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Sidebar from "./Sidebar.jsx";
 import Navbar from "./Navbar.jsx";
 
-const AddDoctor = () => {
+const AddDoctor = ({ admin }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -33,9 +33,9 @@ const AddDoctor = () => {
 
       {/* Main content area with sidebar + form */}
       <div className="flex flex-1">
-        {/* Sidebar on the left */}
+        {/* Sidebar */}
         <div className="w-64">
-          <Sidebar />
+          <Sidebar data={admin} />
         </div>
 
         {/* Form in the remaining space */}

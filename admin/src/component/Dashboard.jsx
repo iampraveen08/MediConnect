@@ -5,17 +5,16 @@ import { PiNotebookBold } from "react-icons/pi";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 
-const Data = () => {
+const Data = ({ admin }) => {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
-      {/* Navbar at the top */}
+      {/* Navbar */}
       <Navbar />
 
-      {/* Main content area with sidebar + dashboard */}
       <div className="flex flex-1">
-        {/* Sidebar on the left */}
+        {/* Sidebar */}
         <div className="w-64">
-          <Sidebar />
+          <Sidebar data={admin} />
         </div>
 
         {/* Main content */}
@@ -49,10 +48,7 @@ const Data = () => {
                 key={index}
                 className="bg-white rounded shadow-sm hover:shadow-xl transition duration-300 cursor-pointer p-4 flex items-center gap-4"
               >
-                {/* Icon on the left */}
                 <div className="text-indigo-600 text-xl">{item.icon}</div>
-
-                {/* Number and description stacked vertically on the right */}
                 <div>
                   <h3 className="font-semibold text-gray-800 text-lg text-left">
                     {item.num}
@@ -75,9 +71,13 @@ const Data = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr className="text-sm">
+                <tr className="text-sm border-t">
                   <td className="p-4">Praveen Kumar</td>
-                  <button className="p-2 bg-red-100 text-red-600 rounded-full hover:bg-red-200">✕</button>
+                  <td className="p-4">
+                    <button className="p-2 bg-red-100 text-red-600 rounded-full hover:bg-red-200">
+                      ✕
+                    </button>
+                  </td>
                 </tr>
               </tbody>
             </table>

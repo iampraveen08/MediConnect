@@ -4,7 +4,7 @@ import Navbar from "./Navbar.jsx";
 import Sidebar from "./Sidebar.jsx";
 import data from "./content.json";
 
-export default function DoctorList() {
+export default function DoctorList({ admin }) {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Navbar at the top */}
@@ -12,9 +12,9 @@ export default function DoctorList() {
 
       {/* Main content area */}
       <div className="flex flex-1">
-        {/* Sidebar on the left */}
-        <div className="w-64 bg-gray-100 border-r">
-          <Sidebar />
+        {/* Sidebar */}
+        <div className="w-64">
+          <Sidebar data={admin} />
         </div>
 
         {/* Doctor cards area */}

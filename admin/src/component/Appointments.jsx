@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar"; // Adjust the path based on your file structure
 import Sidebar from "./Sidebar"; // Adjust the path based on your file structure
 
-export default function Appointments() {
+export default function Appointments({ admin }) {
   const appointments = [
     {
       id: 1,
@@ -23,9 +23,9 @@ export default function Appointments() {
 
         {/* Main content area with sidebar + table */}
         <div className="flex flex-1">
-          {/* Sidebar on the left */}
+          {/* Sidebar */}
           <div className="w-64">
-            <Sidebar />
+            <Sidebar data={admin} />
           </div>
 
           {/* Appointments Table */}
