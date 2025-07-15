@@ -33,7 +33,7 @@ export default function DoctorLogin() {
       localStorage.setItem("token", data.token);
 
       setMessage("Login successful");
-      navigate("/dashboard"); // redirect after login
+      navigate("/doctordashboard"); // redirect after login
     } catch (err) {
       setError(err.message);
     }

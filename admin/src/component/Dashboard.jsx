@@ -77,7 +77,7 @@ const Data = () => {
               <tbody>
                 <tr className="text-sm">
                   <td className="p-4">Praveen Kumar</td>
-                  <td className="p-4 text-red-600 text-lg">✖</td>
+                  <button className="p-2 bg-red-100 text-red-600 rounded-full hover:bg-red-200">✕</button>
                 </tr>
               </tbody>
             </table>

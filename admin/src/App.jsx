@@ -7,6 +7,9 @@ import Dashboard from "./component/Dashboard.jsx";
 import AddDoctor from "./component/AddDoctor.jsx";
 import DoctorList from "./component/DoctorList.jsx";
 import Appointments from "./component/Appointments.jsx";
+import DoctorDashboard from "./Pages/Doctor/DoctorDashboard.jsx";
+import DoctorAppointments from "./Pages/Doctor/DoctorAppointments.jsx";
+import DoctorProfile from "./Pages/Doctor/DoctorProfile.jsx";
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/appointments" element={<Appointments />} />
         <Route path="/doctorlist" element={<DoctorList />} />
+          <Route path="/doctordashboard" element={<DoctorDashboard />} />
+          <Route path="/doctorappointments" element={<DoctorAppointments />} />
+          <Route path="/doctorprofile" element={<DoctorProfile />} />
       </Routes>
     </Router>
   );

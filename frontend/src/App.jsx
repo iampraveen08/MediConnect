@@ -15,7 +15,7 @@ import BottomContent from "./components/BottomContent";
 
 // Page & Auth Imports
 import AllDoctors from "./pages/AllDoctors";
-import DoctorLogin from "./doctor/DoctorLogin";
+import DoctorLogin from "../../admin/src/Pages/Doctor/DoctorLogin.jsx";
 import AdminLogin from "../../admin/src/component/AdminLogin";
 
 // Static Data
