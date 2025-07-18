@@ -31,7 +31,8 @@ export default function Signup() {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth/signup", {
+      // http://localhost:5000/api/auth/signup
+      const response = await fetch("https://prescripto-backend-7tng.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
