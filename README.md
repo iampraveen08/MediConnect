@@ -1,10 +1,3 @@
-Frontend Part-
-
-
-
-
-
-
-
-
-Backend Part-
+Bugs:-
+Render
+updated 

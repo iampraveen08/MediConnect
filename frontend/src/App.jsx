@@ -16,7 +16,6 @@ import BottomContent from "./components/BottomContent";
 // Page & Auth Imports
 import AllDoctors from "./pages/AllDoctors";
 import DoctorLogin from "../../admin/src/Pages/Doctor/DoctorLogin.jsx";
-import AdminLogin from "../../admin/src/component/AdminLogin";
 
 // Static Data
 import data from "./components/content.json";
@@ -77,7 +76,6 @@ export default function App() {
         />
 
         <Route path="/doctorlogin" element={<DoctorLogin />} />
-          <Route path="/adminlogin" element={<AdminLogin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
       </Routes>
