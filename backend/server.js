@@ -14,15 +14,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// API Routes
+// Routes
 app.use("/api/auth", authRoutes);
 
-// Serve static files from Vite build
-app.use(express.static(path.join(__dirname, "frontend", "dist")));
-
-// React Router fallback (for /login, /signup etc.)
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+// Handle unknown routes
+app.use((req, res) => {
+    res.status(404).json({ message: "Route not found" });
 });
 
 // MongoDB Connection
