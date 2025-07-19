@@ -21,6 +21,7 @@ import data from "./components/content.json";
 
 // Styling
 import "./App.css";
+import MyProfile from "./components/MyProfile";
 
 export default function App() {
   return (
@@ -75,6 +76,7 @@ export default function App() {
         />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<MyProfile />} />
       </Routes>
     </Router>
   );
