@@ -3,52 +3,92 @@
     {
       "imgSrc": "https://img.freepik.com/free-photo/front-view-young-female-doctor-white-medical-suit-with-stethoscope-smiling-white_140725-16521.jpg?uid=R202393192&ga=GA1.1.2144590951.1743410086&semt=ais_hybrid&w=740",
       "name": "Dr. Ayesha Sharma",
-      "speciality": "General Physician"
+      "speciality": "General Physician",
+      "About": "Dr. Ayesha Sharma is deeply dedicated to providing holistic and patient-centered medical care, with a strong emphasis on preventive health, accurate diagnosis, and personalized treatment plans. Dr. Ayesha Sharma is deeply dedicated to providing holistic and patient-centered medical care, with a strong emphasis on preventive health, accurate diagnosis, and personalized treatment plans.",
+      "Fees": "$50",
+      "Experience": "4",
+      "degree": "MBBS"
     },
     {
       "imgSrc": "https://img.freepik.com/free-photo/front-view-young-female-doctor-white-medical-suit-with-stethoscope-smiling-white_140725-16521.jpg?uid=R202393192&ga=GA1.1.2144590951.1743410086&semt=ais_hybrid&w=740",
       "name": "Dr. Kavita Nair",
-      "speciality": "Gynecologist"
+      "speciality": "Gynecologist",
+      "About": "Dr. Kavita Nair specializes in women's reproductive health, offering expert guidance and compassionate care in prenatal, postnatal, and hormonal health. She is passionate about empowering women through informed medical decisions.",
+      "Fees": "$60",
+      "Experience": "6",
+      "degree": "MBBS, MD (Gynecology)"
     },
     {
       "imgSrc": "https://img.freepik.com/free-photo/doctor-smiling-with-stethoscope_1154-36.jpg?uid=R202393192&ga=GA1.1.2144590951.1743410086&semt=ais_hybrid&w=740",
       "name": "Dr. Rohan Mehta",
-      "speciality": "Dermatologist"
+      "speciality": "Dermatologist",
+      "About": "Dr. Rohan Mehta offers expert care in treating various skin, hair, and nail conditions. He combines clinical excellence with cosmetic dermatology to achieve long-lasting, confident results for his patients.",
+      "Fees": "$55",
+      "Experience": "5",
+      "degree": "MBBS, MD (Dermatology)"
     },
     {
       "imgSrc": "https://img.freepik.com/free-photo/pretty-female-doctor-with-arms-crossed_23-2147648686.jpg?uid=R202393192&ga=GA1.1.2144590951.1743410086&semt=ais_hybrid&w=740",
       "name": "Dr. Priya Menon",
-      "speciality": "Pediatrician"
+      "speciality": "Pediatrician",
+      "About": "Dr. Priya Menon provides warm and expert care for children from infancy through adolescence. She emphasizes preventive pediatric care and child development, ensuring both physical and emotional well-being.",
+      "Fees": "$45",
+      "Experience": "7",
+      "degree": "MBBS, DCH"
     },
     {
       "imgSrc": "https://img.freepik.com/free-photo/portrait-smiling-handsome-male-doctor-man_171337-5055.jpg?uid=R202393192&ga=GA1.1.2144590951.1743410086&semt=ais_hybrid&w=740",
       "name": "Dr. Sameer Khan",
-      "speciality": "Neurologist"
+      "speciality": "Neurologist",
+      "About": "Dr. Sameer Khan is a leading neurologist specializing in the diagnosis and treatment of brain and nerve disorders. He believes in precision diagnosis and long-term neurological health through patient education and advanced therapy.",
+      "Fees": "$70",
+      "Experience": "8",
+      "degree": "MBBS, DM (Neurology)"
     },
     {
       "imgSrc": "https://img.freepik.com/free-photo/beautiful-female-doctor-white-coat-standing-arms-crossed-white-wall_114579-47701.jpg?uid=R202393192&ga=GA1.1.2144590951.1743410086&semt=ais_hybrid&w=740",
       "name": "Dr. Neha Singh",
-      "speciality": "Gastroenterologist"
+      "speciality": "Gastroenterologist",
+      "About": "Dr. Neha Singh focuses on the digestive system, offering treatments for chronic GI issues with a patient-first approach. Her commitment lies in combining dietary guidance with modern medicine for effective results.",
+      "Fees": "$65",
+      "Experience": "6",
+      "degree": "MBBS, DM (Gastroenterology)"
     },
     {
-      "imgSrc": "https://img.freepik.com/free-photo/beautiful-female-doctor-white-coat-standing-arms-crossed-white-wall_114579-47701.jpg?uid=R202393192&ga=GA1.1.2144590951.1743410086&semt=ais_hybrid&w=740",
+      "imgSrc": "https://img.freepik.com/free-photo/pretty-female-doctor-with-arms-crossed_23-2147648686.jpg?uid=R202393192&ga=GA1.1.2144590951.1743410086&semt=ais_hybrid&w=740",
       "name": "Dr. Priya Menon",
-      "speciality": "Pediatrician"
+      "speciality": "Pediatrician",
+      "About": "Dr. Priya Menon is passionate about providing comprehensive care to children with a blend of kindness and clinical excellence. She emphasizes parental involvement and early developmental screenings.",
+      "Fees": "$45",
+      "Experience": "7",
+      "degree": "MBBS, DCH"
     },
     {
       "imgSrc": "https://img.freepik.com/free-photo/portrait-smiling-handsome-male-doctor-man_171337-5055.jpg?uid=R202393192&ga=GA1.1.2144590951.1743410086&semt=ais_hybrid&w=740",
       "name": "Dr. Sameer Khan",
-      "speciality": "Neurologist"
+      "speciality": "Neurologist",
+      "About": "With a patient-centric approach, Dr. Sameer Khan delivers expert care in managing complex neurological disorders. His focus is on accurate diagnostics and compassionate follow-ups.",
+      "Fees": "$70",
+      "Experience": "8",
+      "degree": "MBBS, DM (Neurology)"
     },
     {
       "imgSrc": "https://img.freepik.com/free-photo/beautiful-female-doctor-white-coat-standing-arms-crossed-white-wall_114579-47701.jpg?uid=R202393192&ga=GA1.1.2144590951.1743410086&semt=ais_hybrid&w=740",
       "name": "Dr. Neha Singh",
-      "speciality": "Gastroenterologist"
+      "speciality": "Gastroenterologist",
+      "About": "Specializing in gastrointestinal health, Dr. Neha Singh offers evidence-based treatments and lifestyle coaching to improve digestive wellness for all age groups.",
+      "Fees": "$65",
+      "Experience": "6",
+      "degree": "MBBS, DM (Gastroenterology)"
     },
     {
       "imgSrc": "https://img.freepik.com/free-photo/portrait-smiling-handsome-male-doctor-man_171337-5055.jpg?uid=R202393192&ga=GA1.1.2144590951.1743410086&semt=ais_hybrid&w=740",
       "name": "Dr. Sameer Khan",
-      "speciality": "Neurologist"
+      "speciality": "Neurologist",
+      "About": "Renowned for his deep knowledge in neurotherapy, Dr. Sameer Khan leads with empathy and skill, treating conditions like epilepsy, stroke, and migraines with a long-term care mindset.",
+      "Fees": "$70",
+      "Experience": "8",
+      "degree": "MBBS, DM (Neurology)"
     }
   ]
 }

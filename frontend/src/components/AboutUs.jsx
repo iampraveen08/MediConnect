@@ -5,7 +5,6 @@ import Footer from "./Footer";
 export default function AboutUs() {
   return (
     <div>
-      <Navbar />
       <div className="bg-white text-gray-800 py-12 px-4 sm:px-8 md:px-16">
         {/* Header Section */}
         <div className="max-w-6xl mx-auto">
@@ -85,7 +84,6 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

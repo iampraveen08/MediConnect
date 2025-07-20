@@ -23,10 +23,13 @@ import "./App.css";
 import MyProfile from "./components/MyProfile";
 import Appointments from "./components/Appointments";
 import Home from "./components/Home";
+import ScrollToTop from "./components/ScrollToTop";
+import DoctorDetail from "./components/DoctorDetail";
 
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home data={data} />} />
 
@@ -34,12 +37,22 @@ export default function App() {
 
         <Route path="/contact" element={<Contact />} />
 
-        <Route path="/about" element={<AboutUs />} />
+        <Route
+          path="/about"
+          element={
+            <>
+              <Navbar />
+              <AboutUs />
+              <Footer />
+            </>
+          }
+        />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<MyProfile />} />
         <Route path="/appointments" element={<Appointments />} />
         <Route path="/speaciality" element={<Info />} />
+        <Route path="/doctordetail" element={<DoctorDetail />} />
       </Routes>
     </Router>
   );

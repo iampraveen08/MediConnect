@@ -1,25 +1,35 @@
-import React, { useState } from "react";
-import data from "../components/content.json";
-import Footer from "../components/Footer";
+import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
-
-const categories = [
-  "All",
-  "General Physician",
-  "Gynecologist",
-  "Dermatologist",
-  "Pediatrician",
-  "Neurologist",
-  "Gastroenterologist",
-];
+import Footer from "../components/Footer";
+import data from "../components/content.json"; // Ensure this path is correct
 
 export default function AllDoctors() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const navigate = useNavigate();
+  const location = useLocation(); // ✅ Add parentheses here
+  const categories = [
+    "All",
+    "General Physician",
+    "Gynecologist",
+    "Dermatologist",
+    "Pediatrician",
+    "Neurologist",
+    "Gastroenterologist",
+  ];
+
+  const queryParams = new URLSearchParams(location.search);
+  const defaultSpeciality = queryParams.get("speciality") || "All";
+
+  const [selectedCategory, setSelectedCategory] = useState(defaultSpeciality);
 
   const filteredDoctors =
     selectedCategory === "All"
       ? data.doctors
       : data.doctors.filter((doc) => doc.speciality === selectedCategory);
+
+  useEffect(() => {
+    setSelectedCategory(defaultSpeciality);
+  }, [defaultSpeciality]);
 
   return (
     <div>
@@ -29,8 +39,7 @@ export default function AllDoctors() {
           Browse through the doctors specialist.
         </h2>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap gap-3 mb-10">
+        <div className="flex flex-wrap gap-3 mb-10 justify-center">
           {categories.map((category, index) => (
             <button
               key={index}
@@ -46,12 +55,16 @@ export default function AllDoctors() {
           ))}
         </div>
 
-        {/* Doctor Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredDoctors.map((doc, index) => (
             <div
               key={index}
-              className="bg-indigo-50 rounded-xl p-4 shadow-sm hover:shadow-md transition"
+              onClick={() =>
+                navigate("/doctordetail", {
+                  state: { doctor: doc },
+                })
+              }
+              className="bg-indigo-50 rounded-xl p-4 shadow-sm hover:shadow-md transition cursor-pointer"
             >
               <img
                 src={doc.imgSrc}
