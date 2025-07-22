@@ -20,7 +20,7 @@ Backend :-
 
 Your gateway to secure and hassle-free doctor bookings.
 
-Find trusted doctors, view availability, and book appointments instantly—convenient, reliable healthcare at your fingertips, anytime you need it.
+Find trusted doctorModel, view availability, and book appointments instantly—convenient, reliable healthcare at your fingertips, anytime you need it.
 
 ![MediConnect](https://github.com/iampraveen08/MediConnect/blob/main/frontend/src/assets/)
 
