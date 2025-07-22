@@ -1,3 +1,5 @@
+// Update Project name to MediConnect from all files also in deployment.
+
 URLs:-
 
 Frontend URL :- https://prescripto-0oze.onrender.com
@@ -69,13 +71,13 @@ Find trusted doctorModel, view availability, and book appointments instantly—c
 
 ```bash
 ├── public/
-│   ├── assets/             # Images, textures, models
-│   ├── models/             # 3D Astronaut model
+│   ├── assets/             # Images
+│   ├── models/             # 
 │   └── vite.svg
 ├── src/
 │   ├── components/         # Reusable components
 │   ├── constants/          # Reusable datas
-│   ├── sections/           # Portfolio sections (Hero, About, etc.)
+│   ├── sections/           # 
 │   ├── App.jsx             # Main app file
 │   ├── index.css           # Tailwind css
 │   └── main.jsx            # Entry point
