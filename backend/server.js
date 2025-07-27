@@ -1,38 +1,29 @@
-import express from "express";
-import mongoose from "mongoose";
-import dotenv from "dotenv";
-import cors from "cors";
-import path from "path";
+import express from "express"
+import cors from 'cors'
+import 'dotenv/config'
+import connectDB from "./config/mongodb.js"
+import connectCloudinary from "./config/cloudinary.js"
+import userRouter from "./routes/userRoute.js"
+import doctorRouter from "./routes/doctorRoute.js"
+import adminRouter from "./routes/adminRoute.js"
 
-import authRoutes from "./routes/auth.js";
+// app config
+const app = express()
+const port = process.env.PORT || 4000
+connectDB()
+connectCloudinary()
 
-dotenv.config();
+// middlewares
+app.use(express.json())
+app.use(cors())
 
-const app = express();
+// api endpoints
+app.use("/api/user", userRouter)
+app.use("/api/admin", adminRouter)
+app.use("/api/doctor", doctorRouter)
 
-// Middlewares
-app.use(cors());
-app.use(express.json());
-
-// Routes
-app.use("/api/auth", authRoutes);
-
-// Handle unknown routes
-app.use((req, res) => {
-    res.status(404).json({ message: "Route not found" });
+app.get("/", (req, res) => {
+    res.send("API Working")
 });
 
-// MongoDB Connection
-mongoose
-    .connect(process.env.MONGO_URI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    })
-    .then(() => console.log("✅ MongoDB Connected"))
-    .catch((err) => console.error("❌ MongoDB connection error:", err));
-
-// Start Server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () =>
-    console.log(`🚀 Server running on http://localhost:${PORT}`)
-);
+app.listen(port, () => console.log(`Server started on PORT:${port}`))

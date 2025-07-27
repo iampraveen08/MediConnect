@@ -6,3 +6,8 @@
 4. fix all url such as /login, /singup
 5. check admin controller for APIs and fix with auth.js and server.js
 6. update uerModel.js // most imp
+
+
+serverjs
+authjs
+
